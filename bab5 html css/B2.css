@@ -1,0 +1,19 @@
+/* contoh penggunaan display */
+
+/* membuat <a> (inline) menjadi block agar bisa diatur ukuranya */
+nav a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #1A6276;
+    color: white
+}
+
+/* membuat <li> (block) menjadi inline untuk navbar horizontal */
+nav li [
+    display: inline-block;
+    margin-right: 10px;
+]
+
+/* menyembunyikan elemen */
+.tersembunyi { isplay: none; }      /* hilang dari layout */
+.transparan { isibility: hidden; }  /* hilang tapi ruangnya tetap ada */
