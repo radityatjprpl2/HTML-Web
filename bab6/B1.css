@@ -1,0 +1,57 @@
+/* === SELECTOR KOMBINASI === */
+
+/* Descendant: semua <a> di dalam nav */
+nav a { color: white; text-decoration: none; }
+
+/* Child: hanya <li> langsung dari .menu */
+.menu > li { display: inline-block; }
+
+/* nth-child: baris genap tabel warna berbeda (zebra striping) */
+tr:nth-child(even) { background-color: #f2f3f4; }
+tr:nth-child(odd)  { background-color: white; }
+
+/* setiap 3 elemen, mulai dari elemen ke-1 (1, 4, 7, 1....) */
+li:nth-child(3n+1) { font-weight: bold; }
+
+/* === PSEUDO-CLASS === */
+.tombol:hover   { background: #1a5276; transform: translateY(-2px); }
+.tombol:active   { transform: translateY(0); }
+
+input:focus {
+    outline: none;
+    border-color: #2e86c1;
+    box-shadow: 0 0 0 3px rgba(46, 134, 193, 0.3);
+}
+
+/* === PSEUDO-ELEMENT === */
+/* menambahkan ikon sebelum judul section */
+h2::before {
+    content: '▶';
+    color: #2e86c1;
+}
+
+/* garis dekoratif setelah judul */
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #d4ac0d;
+    margin-top: 8px;
+}
+
+/* huruf pertaman diperbesar (drop cap) */
+p.artikel::first-letter {
+    font-size: 3em;
+    font-weight: bold;
+    float: left;
+    line-height: 1;
+    margin-right: 8px;
+    color: #1a5276;
+}
+
+/* warna text yang di seleksi */
+::selection {
+    background: #aed6f1;
+    color: #1a5276;
+}
